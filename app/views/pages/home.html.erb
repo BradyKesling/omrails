@@ -1,7 +1,19 @@
-<div class="hero-unit">
-	<h1>Welcome to One Month Rails!</h1>
-	<p>You've found the home page for the
-	<%= link_to "One Month Rails", "http://onemonthrails.com" %>
-	application.</p>
-	<p><%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %></p>
-</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Month Rails</title>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<% csrf_meta_tags %>
+	</head>
+	<body>
+		<%= render 'layouts/header' %>
+
+		<div class="hero-unit">
+			<h1>Welcome to One Month Rails!</h1>
+			<p>You've found the home page for the
+			<%= link_to "One Month Rails", "http://onemonthrails.com" %>
+			application.</p>
+			<p><%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %></p>
+		</div>
+	</body>
